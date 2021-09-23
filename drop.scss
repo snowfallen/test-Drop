@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(35deg , #CCFFFF , #FFCCCC);
+  display: flex;
+  padding-top: 5rem;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.col-header {
+  width: 150px;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+}
+
+.item {
+  width: 150px;
+  height: 66px;
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  background: #f7f6f7;
+  padding: 0.8rem 1rem;
+  margin: 5px 0 0 0;
+  color: #828282;
+  text-align: center;
+  cursor: grab;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition: ease all 3s;
+  animation-name: bgc;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  @keyframes bgc {
+      0%{
+        box-shadow: 4px 12px 12px rgba(209, 152, 152, 0.36);
+      }
+      25%{
+        box-shadow: 8px 8px 12px rgba(190, 57, 57, 0.36);
+      }
+      50%{
+        box-shadow: 12px 4px 12px rgba(190, 19, 19, 0.36);
+      }
+      75%{
+        box-shadow: 8px 8px 12px rgba(190, 57, 57, 0.36);
+      }
+      100%{
+        box-shadow: 4px 12px 12px rgba(209, 152, 152, 0.36);
+      }
+  }
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  width: 150px;
+  height: 1500px;
+  padding: 10px 0 0 0;
+  transition: all 0.2s;
+}
+.start,.progress,.done{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    align-items: center;
+    text-align: center;
+}
+.start {
+  background: linear-gradient(90deg, #aa4343 0%, #229efd 179.25%);
+}
+
+.progress {
+  background: linear-gradient(90deg, #9b3d3d 0%, #1cd1d1 179.25%);
+
+}
+
+.done {
+  background: linear-gradient(90deg, #864141 0%, #117236 179.25%);
+}
+
+.hold{
+    border: 5px solid rgb(255, 149, 149);
+}
+.hide{
+    display: none;
+}
+.hovered{
+    border-top: 2px solid #ee3c68;
+}
+
+@media(max-width:768px){
+  .row {
+    justify-content: space-around;
+  }
+}
